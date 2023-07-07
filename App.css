@@ -1,0 +1,57 @@
+/* IMPORTAMOS LA FUENTE QUE DESEAMOS */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+.text-container {
+  display: flex;
+}
+
+/* LE DAMOS ESTILO INICIAL A NUESTRAS LETRAS */
+.letter {
+  transition: transform 0.3s, color 0.3s; /*usamos transition para darle un toque más suave al cambio de color */
+  cursor: pointer;
+  display: inline-block;
+  font-size: 30px; /*adapta el tamaño de la fuente a tu gusto*/
+  font-weight: 700;
+  color: white;
+  font-family: "Josefin Sans", sans-serif; /*usamos la fuente importada*/
+}
+
+/* LE DAMOS PROPIEDAD HOVER PARA EMPEZAR CON EL TEXTO INTERACTIVO */
+.letter:hover {
+  transform: translateY(-5px); /*desplazamos el texto -5px hacia arriba*/
+  background: linear-gradient(to right, rgb(255, 247, 5), rgb(221, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LE DAMOS PROPIEDAD ACTIVE QUE RESPONDE A UN CLICK EN LA LETRA */
+.letter:active {
+  background: linear-gradient(to right, rgb(34, 4, 119), rgb(9, 255, 9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* IMAGEN */
+.face {
+  width: 32px;
+  height: 32px;
+}
+
+/* HOVER DE LA IMAGEN, EFECTO DE VUELTA 360 */
+.face:hover {
+  transform: rotate(360deg) translateY(-5px);
+  transition: 1s;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #03313a;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
